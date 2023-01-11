@@ -1,3 +1,5 @@
+
+
 public class Branch extends College {
     String branchname;
     int branchid;

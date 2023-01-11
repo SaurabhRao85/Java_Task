@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Subbank extends Mainbank {
@@ -14,7 +13,7 @@ public class Subbank extends Mainbank {
         super(bankname, bankid, bankphno, bankTotalfund, bankinterest);
         this.name = name;
         this.id = id;
-        this.phno = phno;
+    this.phno = phno;
 
         this.subbankTotalfund = subbankTotalfund;
         this.subbankinterest = subbankinterest;
