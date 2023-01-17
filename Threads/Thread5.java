@@ -1,4 +1,3 @@
-package Threads;
 
 public class Thread5 extends Thread {
     public static void main(String args[]) {

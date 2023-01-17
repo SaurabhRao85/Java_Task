@@ -1,4 +1,3 @@
-package Threads;
 
 import java.lang.Thread;
 

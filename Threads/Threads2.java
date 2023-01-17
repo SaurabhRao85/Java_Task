@@ -1,7 +1,5 @@
-package Threads;
 
 import java.lang.Thread;
-
 
 public class Threads2 extends Thread {
 
