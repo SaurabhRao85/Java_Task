@@ -1,0 +1,11 @@
+create database BankDetails;
+use BankDetails;
+create table Bank(bankid INT auto_increment primary key,name Varchar(255),address Varchar(255),bankcode INT(255));
+create table Bank(Name Varchar(255),Address Varchar(255),Bankcode Varchar(255));
+create table Bank(Name Varchar(255),Address Varchar(255),Bankcode Varchar(255));
+create table Customer(customerid INT auto_increment primary key,customername Varchar(255),customeremail varchar(255),customerpassword varchar(255),customerphno INT(255),customercardno INT(255));
+create table account(accountid int auto_increment primary key, accountno bigint unique,accountbalance float not null,accounttype varchar(255) not null, customerid int, foreign key(customerid) references customer(customerid));
+alter table account ADD (bankid INT );
+alter table account ADD constraint (bankid) references Bank(bankid);
+create table transaction(transaction_id INT auto_increment primary key,transaction_date DATE not null,transaction_amount float not null,transaction_type varchar(255) not null,current_balance float not null,accountid INT not null, foreign key (accountid) references account(accountid));
+create table ATM(accountid INT auto_increment primary key,deposite BOOL, withdraw BOOL,account_balance BOOL,transaction_id INT not null, foreign key (transaction_id) references transaction(transaction_id));
